@@ -36,8 +36,8 @@ the storage donut chart, Ace for the code editor).
 ```bash
 # 1. Upload/clone the project to your VPS, e.g.:
 cd /var/www
-git clone <your-repo-or-upload> storage-panel
-cd storage-panel
+git clone https://github.com/ALLAY-XD-20/Storage-Panel
+cd Storage-Panel
 
 # 2. Run the installer
 bash install.sh
