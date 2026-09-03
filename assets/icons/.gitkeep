@@ -1,0 +1,2 @@
+Icons are rendered inline as SVG in assets/js/icons.js — this folder is kept
+as a place to drop custom icon assets (e.g. a favicon) if desired.

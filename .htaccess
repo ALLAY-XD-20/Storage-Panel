@@ -1,0 +1,17 @@
+# Storage Panel — root .htaccess
+# Used when AllowOverride All is enabled (see apache/storage-panel.conf).
+
+Options -Indexes -FollowSymLinks
+DirectoryIndex index.php
+
+# Deny direct access to sensitive file types anywhere under this app.
+<FilesMatch "\.(sqlite|sqlite3|db|log|env|bak|ini)$">
+    Require all denied
+</FilesMatch>
+
+# Extra hardening headers (mirrors includes/security.php; harmless if duplicated).
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set Referrer-Policy "same-origin"
+</IfModule>
